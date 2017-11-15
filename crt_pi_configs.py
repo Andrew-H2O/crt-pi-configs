@@ -206,4 +206,7 @@ def createZip(curvature=False, screenWidth=0, screenHeight=0):
 
 
 if __name__ == "__main__":
-    generateConfigs(sys.argv[1], sys.argv[2], sys.argv[3])
+    if "curvature" in sys.argv[2]:
+        generateConfigs(sys.argv[1], sys.argv[2], 0)
+    else:
+        generateConfigs(sys.argv[1], sys.argv[2], sys.argv[3])
